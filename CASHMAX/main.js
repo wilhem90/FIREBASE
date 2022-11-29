@@ -1,0 +1,2 @@
+
+import '/CASHMAX/firebase.js'
