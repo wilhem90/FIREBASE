@@ -17,11 +17,11 @@
         <div class="table-wrapper" >
             <table class="table-users">
                 <tr>
-                    <th>First name</th>
-                    <th>Last name</th>
-                    <th>Phone</th>
+                    <th>Nome</th>
+                    <th>Sobrenome</th>
+                    <th>Telefone</th>
                     <th>Email</th>
-                    <th>Action</th>
+                    <th>Ações</th>
 
                 </tr>
                 <tr>
@@ -30,13 +30,36 @@
                     <td>999024969</td>
                     <td>wilhem@gmail.com</td>
                     <td>
-                        <button class="btn btn-edit" type="submit">Edit</button>
-                        <button class=" btn btn-delete" type="submit">Delete</button>
+                        <button class="btn btn-edit" type="submit">Editar</button>
+                        <button class="btn btn-delete" type="submit">Deletar</button>
                     </td>
                 </tr>
             </table>
-            <button class="btn btn-add">Add User</button>
+            <button class="btn btn-add">Add Usuario</button>
+        </div>
+        <!-- Vamo criar um modal -->
+        <div class="add-modal modal-wrapper">
+            <div class="modal">
+                <div class="modal-header">
+                    <h3>Add New User</h3>
+                    <div class="modal-body">
+                        <form class="form" autocomplete="off">
+                            <label for="firstName">Nome
+                            </label>
+                            <input type="text" name="firstName" id="firstName" placeholder="Digite seu nome">
+                            <label for="lastName">Digite seu nome</label>
+                            <input type="text" name="lastName" id="lastName" placeholder="Digite seu sobrenome">
+                            <label for="phoneNumber" >Digite seu telefone</label><input type="number" name="phone" id="phoneNumber" placeholder="Digite seu telefone" min="0">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" placeholder="O seu email">
+                            <button class="btn btn-modal">Enviar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
