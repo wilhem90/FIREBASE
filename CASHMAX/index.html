@@ -37,7 +37,7 @@
                     </div>
                 </tr>
             </table>
-            <button class="btn btn-add">Add Usuario</button>
+            <button class="btn btn-add" id="addd" >Add Usuario</button>
         </div>
         <!-- Vamo criar um modal -->
         <div class="add-modal modal-wrapper">
@@ -61,6 +61,41 @@
             </div>
         </div>
     </div>
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
+
+        import { getFirestore, addDoc, collection} from "https://www.gstatic.com/firebasejs/9.15.0/firebase-firestore.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+          apiKey: "AIzaSyD_huhISA2FckVFBGfYJe22U8JGFun2OQU",
+          authDomain: "teste-6c7a2.firebaseapp.com",
+          projectId: "teste-6c7a2",
+          storageBucket: "teste-6c7a2.appspot.com",
+          messagingSenderId: "137713937453",
+          appId: "1:137713937453:web:22ee6f471168b5276a9ca4"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        // Initialize Cloud Firestore and get a reference to the service
+        const db = getFirestore(app);
+        addd.addEventListener('click', e => {
+            const hora = new Date()
+        addDoc(collection(db, "users"), {
+        name: "Los Angeles",
+        state: "CA",
+        country: "USA",
+        date: `${hora.getMonth()+1}`
+        });
+            });
+
+
+      </script>
 
     <script src="script.js"></script>
 </body>

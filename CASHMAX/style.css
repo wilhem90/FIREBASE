@@ -133,7 +133,18 @@ header h3 {
     -moz-box-shadow: 0px 4px 22px -6px rgba(0,0,0,1);
     box-shadow: 0px 4px 22px -6px rgba(0,0,0,1); 
     border-radius: 10px;
+    animation-name: animatetop;
+    animation-duration: 0.5s;
     
+}
+
+@keyframes animatetop {
+    from {
+        top: -300px; opacity: 0;
+    }
+    to {
+        top: 0; opacity: 1;
+    }
 }
 
 .modal-header {
